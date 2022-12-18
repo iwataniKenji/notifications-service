@@ -1,15 +1,29 @@
 import { SendNotification } from './send-notification';
+import { Notification } from '../entities/notification';
+
+// simula banco de dados para testar feature
+const notifications: Notification[] = [];
+
+// simula camada de persistência (repositório)
+const notificationsRepository = {
+  async create(notification: Notification) {
+    notifications.push(notification);
+  },
+};
 
 describe('Send notification', () => {
   it('should be able to send notification', async () => {
-    const sendNotification = new SendNotification();
+    // SendNotification exige repositório no constructor
+    const sendNotification = new SendNotification(notificationsRepository);
 
-    const { notification } = await sendNotification.execute({
+    await sendNotification.execute({
       content: 'This is notification',
       category: 'social',
       recipientId: 'example-repicientId',
     });
 
-    expect(notification).toBeTruthy();
+    console.log(notifications);
+
+    expect(notifications).toHaveLength(1);
   });
 });
