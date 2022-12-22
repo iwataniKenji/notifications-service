@@ -18,7 +18,7 @@ export class Notification {
   // props facilita passagem de dados no construtor
   constructor(
     props: Replace<NotificationProps, { createdAt?: Date }>,
-    id: string,
+    id?: string,
   ) {
     this._id = id ?? randomUUID();
 

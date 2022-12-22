@@ -1,7 +1,10 @@
 import { Content } from '@application/entities/content';
-import { Notification, NotificationProps } from '@application/entities/notification';
+import {
+  Notification,
+  NotificationProps,
+} from '@application/entities/notification';
 
-type Override = Partial<NotificationProps>
+type Override = Partial<NotificationProps>;
 
 // método factory
 export function makeNotification(override: Override = {}) {
@@ -10,5 +13,5 @@ export function makeNotification(override: Override = {}) {
     content: new Content('Nova solicitação de amizade'),
     recipientId: 'recipient-2',
     ...override,
-  }),
+  });
 }
