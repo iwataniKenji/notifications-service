@@ -1,4 +1,6 @@
+import { Content } from '@application/entities/content';
 import { Notification } from '@application/entities/notification';
+import { Notification as RawNotification } from '@prisma/client';
 
 // mapper -> faz conversão dos dados
 export class PrismaNotificationMapper {
@@ -11,5 +13,20 @@ export class PrismaNotificationMapper {
       readAt: notification.readAt,
       createdAt: notification.createdAt,
     };
+  }
+
+  // converte para camada de domínio
+  static toDomain(raw: RawNotification): Notification {
+    return new Notification(
+      {
+        category: raw.category,
+        content: new Content(raw.content),
+        recipientId: raw.recipientId,
+        readAt: raw.readAt,
+        canceledAt: raw.canceledAt,
+        createdAt: raw.createdAt,
+      },
+      raw.id,
+    );
   }
 }
