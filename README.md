@@ -1,73 +1,68 @@
+<h1 align="center">Notifications Service</h1>
+
+<h2 align="center">Summary</h2>
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+    <a href="#about">📙 About</a>
+    <a href="#start">📖 How to Start</a>
+    <a href="#features">💡 Features</a>
+    <a href="#technologies">💻 Technologies</a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h4 align="center">
+   ✔️ Notifications Service finished ✔️
+</h4>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<h2 id="about">📙 About</H2>
 
-## Description
+<p><strong>Notifications Service</strong> is a simple microservice application developed for reinforcement of some concepts such as repository pattern, in memory database and prisma basics.  It includes unit testing for most of the content created.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<p>On this project development, the intention was to provide a very organized and well structured app architecture despite of its simplicity.</p>
 
-## Installation
+<p>Originally created on Ignite Lab from <a href="https://www.rocketseat.com.br/">Rocketseat</a> and made by <a href="https://www.linkedin.com/in/kleverson-kenji-iwatani/">Kenji Iwatani</a></p>
+
+---
+
+<H2 id="start">📖 How to Start</H2>
 
 ```bash
+# Clone this repository
+$ git clone https://github.com/iwataniKenji/notifications-service
+
+# Access the project directory
+$ cd notifications-service
+
+# Install dependencies
 $ npm install
+
+# Rename '.env.example' to '.env' and set your env variable
+$ ren ".env.example" ".env"
+
+# With a PostgreSQL running, run the migrations
+$ npx prisma migrate dev
+
+# Start the server
+$ npm run dev
 ```
 
-## Running the app
+---
 
-```bash
-# development
-$ npm run start
+<H2 id="features">💡 Concepts</H2>
 
-# watch mode
-$ npm run start:dev
+- [x] Microservice system
+- [x] Dependency injection
+- [x] Dependency inversion
+- [x] Unit testing
+- [x] Value object (split object attribute into separate class for validation and formatting purposes)
+- [x] Repository pattern (between application and persistence layer)
+- [x] In memory database (useful for unit testing without requiring database connection)
+- [x] Factory pattern (abstracts creation of objects)
+- [x] Mappers
 
-# production mode
-$ npm run start:prod
-```
+---
 
-## Test
+<H2 id="technologies">💻 Technologies</H2>
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- [x] <a href="https://nestjs.com/">NestJS</a>
+- [x] <a href="https://www.typescriptlang.org/">Typescript</a>
+- [x] <a href="https://www.prisma.io/">Prisma</a>
