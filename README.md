@@ -1,4 +1,4 @@
-<h1 align="center">Notifications Service</h1>
+<h1 align="center">NOTIFICATIONS SERVICE</h1>
 
 <h2 align="center">Summary</h2>
 
